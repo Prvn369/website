@@ -112,6 +112,8 @@
     
     cursor: pointer;
     user-select: none;
+}
+
 .btn {
     padding: .5rem .8rem;
     border-radius: .3rem;
