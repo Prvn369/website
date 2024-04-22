@@ -10,7 +10,9 @@
 .nav {
     position: fixed;
     width: 100%;
-    height: 3rem;
+    height: 4rem;
+    background: linear-gradient(-180deg, rgb(34, 34, 34), rgba(34, 34, 34, 0));
+    z-index: 1;
 
 }
 
@@ -19,14 +21,26 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 3rem;
-    gap: 3rem;
+    height: 4rem;
+    gap: 5vmin;
+    /* background-color: red; */
 
 }
 
 .nav ul li {
     list-style: none;
+    font-size: 2.2vmin;
+    
+    user-select: none;
+    cursor: pointer;
+}
+.nav ul li a{
+    text-decoration: none;
     color: #fff;
+}
+
+.nav ul li a:hover{
+   color:rgb(35, 167, 255)
 }
 
 .container {
@@ -35,6 +49,7 @@
 
 .left {
     background: rgb(34, 34, 34);
+    /* background-color: #fff; */
     height: 100vh;
     width: 70%;
     display: flex;
@@ -65,11 +80,14 @@
     justify-content: center;
     flex-direction: column;
     color: white;
-    width: 50%;
+    /* background-color: red; */
+    width: 53%;
 }
 
 .name {
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
+
+    font-size: 1.8vmax;
 }
 
 .name span {
@@ -78,12 +96,16 @@
 }
 
 .details h1 {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
+
+    font-size: 4.5vmax;
 }
 
 .details :nth-child(3) {
     margin: 1.4rem 0 1.8rem 0;
-    font-size: .9rem;
+    /* font-size: .9rem; */
+
+    font-size: 1.2vmax;
 }
 
 
@@ -94,6 +116,9 @@
     margin-right: .8rem;
     font-weight: 600;
     font-size: .8rem;
+    
+    cursor: pointer;
+    user-select: none;
 }
 
 .btn:nth-child(1) {
@@ -102,8 +127,7 @@
 }
 
 .btn:nth-child(2) {
-    color: rgb(12, 148, 240);
-    background-color: rgba(34, 34, 34, 0.959);
+    background-color: rgb(12, 148, 240);
     border: 1px solid rgb(12, 148, 240);
 }
 
@@ -114,14 +138,13 @@
 }
 
 .btn:nth-child(2):hover {
-    background-color: rgb(12, 148, 240);
+    color: rgb(12, 148, 240);
+    background-color: rgba(34, 34, 34, 0.959);
     border: 1px solid rgb(12, 148, 240);
-    color: black;
 }
 
 
-.right {
-    background: linear-gradient(0deg, rgb(12, 148, 240), rgba(34, 34, 34));
+.right {    background: linear-gradient(-186deg, rgb(34, 34, 34), rgba(12, 148, 240));
     height: 100vh;
     width: 30%;
     display: flex;
@@ -132,10 +155,11 @@
 }
 
 .outer {
-    position: fixed;
-    left: 50%;
-    height: 500px;
-    width: 500px;
+    position: absolute;
+
+    right: 20%;
+    height: 40vmax;
+    width: 40vmax;
     background-color: rgba(34, 34, 34);
     border-radius: 50%;
     display: flex;
@@ -146,24 +170,24 @@
 .inner {
     background-image: url(img.jpg);
     background-size: 100%;
-    height: 400px;
-    width: 400px;
+    height: 30vmax;
+    width: 30vmax;
     border-radius: 50%;
     box-shadow: rgb(12, 148, 240) 0px 0px 10px, rgb(242, 244, 245) 0px 0px 5px, rgb(12, 148, 240) 0px 0px 20px, rgb(12, 148, 240) 0px 0px 10px, inset rgb(242, 244, 245) 0px 0px 5px, inset rgb(12, 148, 240) 0px 0px 50px;
     border: 1px solid white;
 }
 
-@media(max-width:1000px) {
+@media(max-width:1500px) {
     .outer {
-        left: 45%;
-        height: 400px;
-        width: 400px;
+
+        height: 37vmax;
+        width: 37vmax;
     }
 
     .inner {
         background-size: 100%;
-        height: 300px;
-        width: 300px;
+        height: 27vmax;
+        width: 27vmax;
     }
 }
 
@@ -173,9 +197,9 @@
 
     }
 
-    .nav ul li {
-        font-size: 0.8rem;
-    }
+    /* .nav ul li {
+        font-size: 0.8vmax;
+    } */
 }
 
 @media(max-width:750px) {
@@ -217,6 +241,8 @@
 
     .details h1 {
         font-size: 2rem;
+
+        margin-top: .7vmax;
     }
 
     .details :nth-child(3) {
@@ -226,7 +252,7 @@
     }
 
     .outer {
-        left: auto;
+        right: auto;
         bottom: 2.5rem;
         height: 280px;
 
